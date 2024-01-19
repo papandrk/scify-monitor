@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\RecordController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home Page
 Route::get('/', function () {
-    return view('welcome');
+    if (auth()->user()) {
+        return redirect('/activity');
+    } else {
+        return redirect('/login');
+    }
+});
+
+// Show All Records
+Route::get('/activity', [RecordController::class, 'index'])->middleware('auth');
+
+// Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+// Log User In
+Route::post('/users/authenticate', [UserController::class, 'authenticate'])->middleware('guest');
+
+// Log User Out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+// Catch-All
+Route::fallback(function () {
+    abort(404);
 });
