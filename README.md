@@ -1,66 +1,36 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## About SciFY Monitor
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project, self-titled "SciFY Monitor", is an exercise app made to exhibit basic web development skills for a Full Stack Software Engineer position at [SciFY](https://scify.org/en/). The goal was to "develop an application that will simulate a back-office that allows a SciFY employer to understand the usage of SciFY solutions in the [assistive technology](https://scify.org/en/impact_areas/assistive-technologies-en/) domain. This application will summarize the number of games / exercises created by the community for the [Memor-i-studio](https://scify.org/project/memor-i-studio/) and [Διάννοια](https://scify.org/project/διάνοια/) applications."
 
-## About Laravel
+Specifications:
+Create a simple MVC project (at a language of your preference) with 2 pages.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. **Login Page**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    This can be a simple page with one html form.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    1. Agent's username
+    2. Submit button
 
-## Learning Laravel
+    If user enters username "Antigoni" she should be redirected to the user’s activity page. If username is wrong a message should be displayed again "The username you have provided is invalid."
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. **“Assistive Technologies > User’s activity” page**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    This page displays a table with all the games created at Memori-i studio and all the exercises created at Diannoia.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## How to run
 
-## Laravel Sponsors
+Considering that PHP, Composer & Git have been installed and are in your system's PATH, perform the following:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Open a terminal instance in a directory where you want to store the project and run "git clone https://github.com/papandrk/scify-monitor.git"
+2. Go into the newly created directory: run "cd scify-monitor"
+3. Run "composer install"
+4. Run "cp .env.example .env"
+5. Run "php artisan key:generate"
+6. Set up a database for the app to use - an sqlite database can be used without needing any further installations: just follow [these instructions](https://laravel.com/docs/10.x/database#sqlite-configuration).
+7. Run "php artisan migrate"
+8. Run "php artisan db:seed"
+9. Run "php artisan serve"
+10. In your browser, go to the address "localhost:8000"
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The web app should be up and running now - you can use username "Antigoni" & password "password" to log in.
