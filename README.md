@@ -20,16 +20,16 @@ Create a simple MVC project (at a language of your preference) with 2 pages.
 
 ## How to run
 
-Considering that PHP, Composer & Git have been installed and are in your system's PATH, perform the following:
+Assuming that PHP, Composer & Git have already been installed and are in your system's PATH, perform the following:
 
 1. Open a terminal instance in a directory where you want to store the project and run "git clone https://github.com/papandrk/scify-monitor.git"
 2. Go into the newly created directory: run "cd scify-monitor"
-3. Run "composer install"
-4. Run "cp .env.example .env"
-5. Run "php artisan key:generate"
-6. Set up a database for the app to use - an sqlite database can be used without needing any further installations: just follow [these instructions](https://laravel.com/docs/10.x/database#sqlite-configuration).
-7. Run "php artisan migrate"
-8. Run "php artisan db:seed"
+3. Install all required dependencies: run "composer install"
+4. Set up a .env file: run "cp .env.example .env"
+5. Generate a key for the .env file: run "php artisan key:generate"
+6. Set up a database for the app to use - the easiest solution if no other database software is installed: an sqlite database can be used without needing any further installations: just follow the 1-2 paragraphs from [these instructions](https://laravel.com/docs/10.x/database#sqlite-configuration).
+7. Perform the database migrations by running "php artisan migrate"
+8. Seed the database with predefined data by running "php artisan db:seed"
 9. Run "php artisan serve"
 10. In your browser, go to the address "localhost:8000"
 
