@@ -34,3 +34,13 @@ Assuming that PHP, Composer & Git have already been installed and are in your sy
 10. In your browser, go to the address "localhost:8000"
 
 The web app should be up and running now - you can use username "Antigoni" & password "password" to log in.
+
+## Thoughts on improvements
+
+Some possible improvements-to-be-made, off the top of my head:
+
+- adding sorting functionality to the records list: sort by creation-date, application, alphabetically, descending/ascending etc.
+- add selectable pagination length - in the current form every page returns a fixed maximum of 10 records
+- adding record management - essentially CRUD functionality for the records so that they can be created/edited/deleted etc.
+- adding user account recovery in the event of a forgotten/lost password
+- adding integration with the actual source database that the data comes from - currently the records have been imported from a export of the database, so the data will get unavoidably get "stale"
