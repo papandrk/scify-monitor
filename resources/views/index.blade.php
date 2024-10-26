@@ -16,20 +16,20 @@
         <div class="d-flex flex-column vh-100">
 
             <div class="container">
-                <header class="d-flex flex-wrap justify-content-center py-3">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <header class="d-flex flex-wrap justify-content-center column-gap-5 py-3">
+                    <a href="/" class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none">
                         <img src="images/cropped-SciFY_logo_responsive-192x192.png" width="32" height="32" alt="SciFY Logo" class="me-2">
                         <span class="fs-4">SciFY Monitor</span>
                     </a>
-            
+
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <span class="nav-link link-dark"><i class="fa-solid fa-user me-1"></i> {{ auth()->user()->username }}</span>
+                        <span class="nav-link link-dark px-0"><i class="fa-solid fa-user me-1"></i> {{ auth()->user()->username }}</span>
                     </li>
                     <li>
                         <form method="POST" action="/logout">
                             @csrf
-                            <button type="submit" class="nav-link link-dark"><i class="fa-solid fa-door-closed me-1"></i> Log Out</button>
+                            <button type="submit" class="nav-link link-dark pe-0"><i class="fa-solid fa-door-closed me-1"></i> Log Out</button>
                         </form>
                     </li>
                 </ul>
@@ -40,11 +40,11 @@
 
                 <div class="container">
 
-                    <main class="card m-3 shadow">
+                    <main class="card my-3 shadow">
                         <div class="card-body">
 
                             <h5 class="card-title">Assistive Technologies > Users' Activity</h5>
-                    
+
                             @unless(count($records) == 0)
 
                                 <div class="table-responsive small mt-3">
@@ -71,7 +71,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                
+
                                 <div class="mt-2 mx-4">
                                     {{ $records->links() }}
                                 </div>
@@ -80,7 +80,7 @@
 
                                 <p class="card-text text-center p-4">No records found</p>
 
-                            @endunless    
+                            @endunless
 
                         </div>
                     </main>
