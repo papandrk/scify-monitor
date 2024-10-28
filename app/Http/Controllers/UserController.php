@@ -29,7 +29,7 @@ class UserController extends Controller
 
         return back()->withErrors(['username' => 'The username/password you have provided is invalid'])->onlyInput('username');
     }
-    
+
     // Logout User
     public function logout(Request $request) {
         auth()->logout();

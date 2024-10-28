@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '1', 
+            'exported_id' => '1',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Θεσσαλονίκης',
             'link' => 'https://memoristudio.scify.org/flavor/522/cards',
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '2', 
+            'exported_id' => '2',
             'application' => 'Memor-i',
             'creator' => 'SCIFY',
             'link' => 'https://memoristudio.scify.org/flavor/442/cards',
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '4', 
+            'exported_id' => '4',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Aθηνα',
             'link' => 'https://memoristudio.scify.org/flavor/295/cards',
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '5', 
+            'exported_id' => '5',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Aθηνα',
             'link' => 'https://memoristudio.scify.org/flavor/288/cards',
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '6', 
+            'exported_id' => '6',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Aθηνα',
             'link' => 'https://memoristudio.scify.org/flavor/240/cards',
@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '7', 
+            'exported_id' => '7',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Θεσσαλονίκης',
             'link' => 'https://memoristudio.scify.org/flavor/232/cards',
@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Record::create([
-            'exported_id' => '8', 
+            'exported_id' => '8',
             'application' => 'Memor-i',
             'creator' => 'ΚΕΑΤ-Παράρτημα Θεσσαλονίκης',
             'link' => 'https://memoristudio.scify.org/flavor/218/cards',
