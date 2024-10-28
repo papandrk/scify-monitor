@@ -22,14 +22,14 @@
                         <span class="fs-4">SciFY Monitor</span>
                     </a>
 
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills gap-3">
                     <li class="nav-item">
                         <span class="nav-link link-dark px-0"><i class="fa-solid fa-user me-1"></i> {{ auth()->user()->username }}</span>
                     </li>
                     <li>
                         <form method="POST" action="/logout">
                             @csrf
-                            <button type="submit" class="nav-link link-dark pe-0"><i class="fa-solid fa-door-closed me-1"></i> Log Out</button>
+                            <button type="submit" class="nav-link link-dark px-0"><i class="fa-solid fa-door-closed me-1"></i> Log Out</button>
                         </form>
                     </li>
                 </ul>
